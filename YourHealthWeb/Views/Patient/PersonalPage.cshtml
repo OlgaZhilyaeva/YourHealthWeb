@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Patient>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Patient Page | WebClinic</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">WebClinic</a>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="departments.html">Departments</a></li>
+            <li class="breadcrumb-item"><a href="wards.html">Wards</a></li>
+            <li class="breadcrumb-item"><a href="patients.html">Patients</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Patient Page</li>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <div class="col-lg-4 col-md-12">
+            <div class="jumbotron" id="patient-info">
+                <h3>Sensor №<span id="patientsensor">123</span></h3>
+                <p id="patientname">Name</p>
+                <p id="patientsrnm">Surname</p>
+                <p>Ward <span id="patientwrd">12</span></p>
+                <p id="patientdep">Department <span>1</span></p>
+                <a href="temperature.html"><button type="button" class="btn btn-primary" id="getpatienttemp">Temperature</button></a>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <div class="jumbotron" id="table-block">
+                <table class="table table-hover" id="patient-table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Start</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Finish</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-href="prescription.html">
+                            <th scope="row">1</th>
+                            <td>StartDate1</td>
+                            <td>DrugName1</td>
+                            <td>Quantity1</td>
+                            <td>FinishDate1</td>
+                        </tr>
+                        <tr data-href="prescription.html">
+                            <th scope="row">2</th>
+                            <td>StartDate2</td>
+                            <td>DrugName2</td>
+                            <td>Quantity2</td>
+                            <td>FinishDate2</td>
+                        </tr>
+                        <tr data-href="prescription.html">
+                            <th scope="row">3</th>
+                            <td>StartDate3</td>
+                            <td>DrugName3</td>
+                            <td>Quantity3</td>
+                            <td>FinishDate3</td>
+                        </tr>
+                        <tr data-href="prescription.html">
+                            <th scope="row">4</th>
+                            <td>StartDate4</td>
+                            <td>DrugName4</td>
+                            <td>Quantity4</td>
+                            <td>FinishDate4</td>
+                        </tr>
+                        <tr data-href="prescription.html">
+                            <th scope="row">5</th>
+                            <td>StartDate5</td>
+                            <td>DrugName5</td>
+                            <td>Quantity5</td>
+                            <td>FinishDate5</td>
+                        </tr>
+                        <tr data-href="#">
+                            <th scope="row">6</th>
+                            <td>StartDate6</td>
+                            <td>DrugName6</td>
+                            <td>Quantity6</td>
+                            <td>FinishDate6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="links.js"></script>
+</body>
+</html>

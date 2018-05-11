@@ -1,26 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 using YourHealthWeb.Contracts;
+using YourHealthWeb.Models;
 
 namespace YourHealthWeb.DAL
 {
-    class WardLogic:IRepository
+    class WardLogic:IRepository<Ward>
     {
-        public void Create()
+        public void Create(Ward entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void GetById(int id)
+        public Ward GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void GetAll()
+        public IEnumerable<Ward> GetAll()
         {
             throw new NotImplementedException();
         }

@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.View", "YourHealthWeb\YourHealthWeb.View.csproj", "{C339C9AF-4C9C-40C6-A4B9-10D5199B6FE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourHealthWeb.View", "YourHealthWeb\YourHealthWeb.View.csproj", "{C339C9AF-4C9C-40C6-A4B9-10D5199B6FE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.Core", "YourHealthWeb.Core\YourHealthWeb.Core.csproj", "{141D25DF-A8DC-4EAA-B900-14563610E440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourHealthWeb.Core", "YourHealthWeb.Core\YourHealthWeb.Core.csproj", "{141D25DF-A8DC-4EAA-B900-14563610E440}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.Contracts", "YourHealthWeb.Contracts\YourHealthWeb.Contracts.csproj", "{DB8ED3BB-F17A-4267-823D-7E8269E23E19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourHealthWeb.Contracts", "YourHealthWeb.Contracts\YourHealthWeb.Contracts.csproj", "{DB8ED3BB-F17A-4267-823D-7E8269E23E19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.Models", "YourHealthWeb.Models\YourHealthWeb.Models.csproj", "{AECC9FEF-1CF8-4A8C-BA96-76FB66030436}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourHealthWeb.Models", "YourHealthWeb.Models\YourHealthWeb.Models.csproj", "{AECC9FEF-1CF8-4A8C-BA96-76FB66030436}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.DAL", "YourHealthWeb.DAL\YourHealthWeb.DAL.csproj", "{85F29A19-D790-4D21-B38F-983276AD1EBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourHealthWeb.DAL", "YourHealthWeb.DAL\YourHealthWeb.DAL.csproj", "{85F29A19-D790-4D21-B38F-983276AD1EBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.UnitTests", "YourHealthWeb.UnitTests\YourHealthWeb.UnitTests.csproj", "{4D13204D-AA7B-4A30-B60A-080AD186C20B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourHealthWeb.UnitTests", "YourHealthWeb.UnitTests\YourHealthWeb.UnitTests.csproj", "{4D13204D-AA7B-4A30-B60A-080AD186C20B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourHealthWeb.Mvc", "YourHealthWeb.Mvc\YourHealthWeb.Mvc.csproj", "{6926138E-F715-4FED-A559-F0BE420613C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4D13204D-AA7B-4A30-B60A-080AD186C20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D13204D-AA7B-4A30-B60A-080AD186C20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D13204D-AA7B-4A30-B60A-080AD186C20B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6926138E-F715-4FED-A559-F0BE420613C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6926138E-F715-4FED-A559-F0BE420613C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6926138E-F715-4FED-A559-F0BE420613C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6926138E-F715-4FED-A559-F0BE420613C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

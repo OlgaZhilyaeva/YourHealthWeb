@@ -1,9 +1,10 @@
-﻿namespace YourHealthWeb.Models
+﻿using System.Collections.Generic;
+
+namespace YourHealthWeb.Models
 {
     public class Sensor
     {
         public int SensorId { get; set; }
-        public Temperature Temperature { get; set; }
-        public Patient Patient { get; set; }
+        public string Name { get; set; }
     }
 }

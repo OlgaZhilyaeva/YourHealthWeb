@@ -1,0 +1,68 @@
+﻿@model YourHealthWeb.Mvc.Areas.PatientArea.Models.PatientViewModel
+
+@{
+    ViewData["Title"] = "Patient Page | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Home", "Index", "Home", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Department", "DepartmentList", "Department", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Ward", "WardList", "Ward", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Patients", "PatientList", "Patient", null)
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Patient Page</li>
+    </ul>
+</nav>
+<div class="container">
+
+    <div class="col-lg-4 col-md-12">
+        <div class="jumbotron" id="patient-info">
+            <h3>Sensor №<span id="patientsensor">@Model.Sensor.SensorId</span></h3>
+            <p id="patientname">@Model.Name</p>
+            <p id="patientsrnm">@Model.Surname</p>
+            <p>Ward <span id="patientwrd">@Model.Ward.Name</span></p>
+            <p id="patientdep">@Model.Ward.Department.Name <span>1</span></p>
+            @Html.ActionLink("Temperature", "TemperatureList", "Temperature", null, new { @class = "btn btn-primary", id = Model.PatientId })
+        </div>
+    </div>
+
+    <div class="col-lg-8 col-md-12">
+        <div class="jumbotron" id="table-block">
+            <table class="table table-hover" id="patient-table">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Finish</th>
+                </tr>
+                </thead>
+                <tbody>
+                @{ int i = 1;}
+                    @foreach (var prescription in @Model.Prescriptions)
+                    {
+                        <tr data-href="prescription.html">
+                            <th scope="row">@i</th>
+                            <td>@prescription.StartDate</td>
+                            <td>@prescription.Medicine</td>
+                            <td>@prescription.Duration</td>
+                            <td>@prescription.FinishDate</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

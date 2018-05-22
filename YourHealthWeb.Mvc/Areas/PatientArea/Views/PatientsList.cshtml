@@ -1,0 +1,37 @@
+﻿@using YourHealthWeb.Models
+@model IEnumerable<YourHealthWeb.Models.Patient>
+
+@{
+    ViewData["Title"] = "Patients| WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Home", "Login", "Auth", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Department", "DepartmentList", "Department", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Ward", "WardList", "Ward", null)
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Patients</li>
+    </ul>
+</nav>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <h1>Patients</h1>
+        <div class="jumbotron w-100">
+            @foreach (var patient in Model)
+            {
+                <div class="block-list">
+                    @Html.ActionLink(patient.Name, "PersonalPage", "Patient", new { id = patient.PatientId}, null)
+                    @Html.ActionLink("Report", "PersonalPage", "Patient", null, new { @class = "btn btn-primary", id = "patientReport" })
+                </div>
+             }
+        </div>
+    </div>
+</div>

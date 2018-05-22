@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Admin | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <div class="nav-controls">
+        <a href="newdept.html"><button type="button" class="btn btn-primary">New Dept</button></a>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+        </ul>
+    </div>
+</nav>
+<div class="btn-group" role="group" aria-label="Basic example">
+    @Html.ActionLink("Patients", "Patients", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Users", "Users", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Nurses", "Nurses", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Doctors", "Doctors", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Wards", "Wards", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Departments", "Departments", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Hospitals", "Hospitals", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Medicines", "Medicines", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Prescriptions", "Prescriptions", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Sensors", "Sensors", "Admin", null, new { @class = "btn btn-info" })
+</div>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <div class="jumbotron w-100">
+            <div class="block-list">
+                <a href="departmentpage.html" id="adm-dep1">Department 1</a>
+                <button type="button" class="btn btn-primary" id="adm-dep1del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="departmentpage.html" id="adm-dep2">Department 2</a>
+                <button type="button" class="btn btn-primary" id="adm-dep2del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="departmentpage.html" id="adm-dep3">Department 3</a>
+                <button type="button" class="btn btn-primary" id="adm-dep3del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="departmentpage.html" id="adm-dep4">Department 4</a>
+                <button type="button" class="btn btn-primary" id="adm-dep4del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="departmentpage.html" id="adm-dep5">Department 5</a>
+                <button type="button" class="btn btn-primary" id="adm-dep5del">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "Admin | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <div class="nav-controls">
+        <a href="newuser.html"><button type="button" class="btn btn-primary">New User</button></a>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+        </ul>
+    </div>
+</nav>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a href="admin-patients.html"><button type="button" class="btn btn-info">Patients</button></a>
+    <a href="admin-users.html"><button type="button" class="btn btn-info active">Users</button></a>
+    <a href="admin-nurses.html"><button type="button" class="btn btn-info">Nurses</button></a>
+    <a href="admin-doctors.html"><button type="button" class="btn btn-info">Doctors</button></a>
+    <a href="admin-wards.html"><button type="button" class="btn btn-info">Wards</button></a>
+    <a href="admin-departments.html"><button type="button" class="btn btn-info">Departments</button></a>
+    <a href="admin-hospitals.html"><button type="button" class="btn btn-info">Hospitals</button></a>
+    <a href="admin-medicines.html"><button type="button" class="btn btn-info">Medicines</button></a>
+    <a href="admin-prescriptions.html"><button type="button" class="btn btn-info">Prescriptions</button></a>
+    <a href="admin-sensors.html"><button type="button" class="btn btn-info">Sensors</button></a>
+</div>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <div class="jumbotron w-100">
+            <div class="block-list">
+                <a href="userpage.html" id="adm-usr1">User 1</a>
+                <div class="button-group">
+                    <select class="form-control" id="adm-usr1-sel">
+                        <option>Nurse</option>
+                        <option>Doctor</option>
+                        <option>Patient</option>
+                        <option>Admin</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="adm-usr1del">Delete</button>
+                </div>
+            </div>
+
+            <div class="block-list">
+                <a href="userpage.html" id="adm-usr2">User 2</a>
+                <div class="button-group">
+                    <select class="form-control" id="adm-usr2-sel">
+                        <option>Nurse</option>
+                        <option>Doctor</option>
+                        <option>Patient</option>
+                        <option>Admin</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="adm-usr2del">Delete</button>
+                </div>
+            </div>
+            <div class="block-list">
+                <a href="userpage.html" id="adm-usr3">User 3</a>
+                <div class="button-group">
+                    <select class="form-control" id="adm-usr3-sel">
+                        <option>Nurse</option>
+                        <option>Doctor</option>
+                        <option>Patient</option>
+                        <option>Admin</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="adm-usr3del">Delete</button>
+                </div>
+            </div>
+            <div class="block-list">
+                <a href="userpage.html" id="adm-usr4">User 4</a>
+                <div class="button-group">
+                    <select class="form-control" id="adm-usr4-sel">
+                        <option>Nurse</option>
+                        <option>Doctor</option>
+                        <option>Patient</option>
+                        <option>Admin</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="adm-usr4del">Delete</button>
+                </div>
+            </div>
+            <div class="block-list">
+                <a href="userpage.html" id="adm-usr5">User 5</a>
+                <div class="button-group">
+                    <select class="form-control" id="adm-usr5-sel">
+                        <option>Nurse</option>
+                        <option>Doctor</option>
+                        <option>Patient</option>
+                        <option>Admin</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="adm-usr5del">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

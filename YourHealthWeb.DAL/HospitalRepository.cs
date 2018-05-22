@@ -1,6 +1,11 @@
-﻿namespace YourHealthWeb.DAL
+﻿using YourHealthWeb.Models;
+
+namespace YourHealthWeb.DAL
 {
-    class HospitalRepository
+    public class HospitalRepository:AbstractRepository<Hospital>
     {
+        public HospitalRepository(HospitalContext db) : base(db)
+        {
+        }
     }
 }

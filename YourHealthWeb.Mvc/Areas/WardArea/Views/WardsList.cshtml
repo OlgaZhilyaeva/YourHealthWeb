@@ -1,0 +1,30 @@
+﻿@model IEnumerable<YourHealthWeb.Models.Ward>
+@{
+    ViewData["Title"] = "Wards | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="departments.html">Departments</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Wards</li>
+    </ul>
+</nav>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <h1>Wards</h1>
+        <div class="jumbotron w-100">
+            @foreach (var ward in Model)
+            {
+            <div class="block-list">
+                @Html.ActionLink(ward.Name, "PatientList", "Patient", new { id = ward.WardId}, null)
+                <button type="button" class="btn btn-primary" id="wrd1rep">Report</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+

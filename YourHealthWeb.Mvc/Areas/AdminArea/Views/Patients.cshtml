@@ -1,0 +1,46 @@
+﻿@model IEnumerable<YourHealthWeb.Models.Patient>
+@{
+    ViewData["Title"] = "Admin | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <div class="nav-controls">
+        @Html.ActionLink("Add new patient", "AddNewPatient", "Patient", null, new { @class = "btn btn-primary" })
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item">
+                @Html.ActionLink("Home", "Login", "Auth", null)
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+        </ul>
+    </div>
+
+</nav>
+<div class="btn-group" role="group" aria-label="Basic example">
+    @Html.ActionLink("Patients", "Patients", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Users", "Users", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Nurses", "Nurses", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Doctors", "Doctors", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Wards", "Wards", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Departments", "Departments", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Hospitals", "Hospitals", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Medicines", "Medicines", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Prescriptions", "Prescriptions", "Admin", null, new { @class = "btn btn-info"})
+    @Html.ActionLink("Sensors", "Sensors", "Admin", null, new { @class = "btn btn-info"})
+</div>
+
+<div class="container">
+    <div class="col-lg-9 ">
+        <div class="jumbotron w-100">
+            @foreach (var patient in Model)
+            {
+                <div class="block-list">
+                    @Html.ActionLink(patient.Name, "PersonalPage", "Patient", new { id = patient.PatientId}, null)
+                    @Html.ActionLink("Delete", "DeletePatient", "Patient", null, new { @class = "btn btn-primary", id = patient.PatientId })
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

@@ -24,4 +24,17 @@
     <ProjectReference Include="..\YourHealthWeb.Models\YourHealthWeb.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\AdminArea\Data\" />
+    <Folder Include="Areas\AdminArea\Models\" />
+    <Folder Include="Areas\DepartmentArea\Data\" />
+    <Folder Include="Areas\DepartmentArea\Models\" />
+    <Folder Include="Areas\HomeArea\Data\" />
+    <Folder Include="Areas\HomeArea\Models\" />
+    <Folder Include="Areas\TemperatureArea\Data\" />
+    <Folder Include="Areas\WardArea\Data\" />
+    <Folder Include="Areas\WardArea\Models\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,54 @@
+﻿@model YourHealthWeb.Mvc.Areas.TemperatureArea.Models.TemperatureViewModel
+@{
+    ViewData["Title"] = "Temperature | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Home", "Index", "Home", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Department", "DepartmentList", "Department", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Ward", "WardList", "Ward", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Patients", "PatientList", "Patient", null)
+        </li>
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Patient Page", "PersonalPage", "Patient", null)
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Temperature</li>
+    </ul>
+</nav>
+<div class="container">
+    
+    <div class="col-lg-8">
+        <div class="prescription-info">
+            <h3>Temperature</h3>
+            <h3>@Model.NameUser</h3>
+        </div>
+        <table class="table table-hover">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            @foreach (var temp in Model.Temperatures)
+            {
+                <tbody>
+                <tr>
+                    <th scope="row">@temp.DateTime</th>
+                    <td>@temp.Value</td>
+                </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+		
+</div>

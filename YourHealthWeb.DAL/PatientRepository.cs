@@ -23,5 +23,6 @@ namespace YourHealthWeb.DAL
             var patients = GetAll();
             return patients.Where(x => x.Ward.Department.DepartmentId == departmentId);
         }
+
     }
 }

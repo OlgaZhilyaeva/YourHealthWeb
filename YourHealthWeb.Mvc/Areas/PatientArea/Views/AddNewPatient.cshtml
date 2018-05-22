@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "New Patient | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <div class="nav-controls">
+        @Html.ActionLink("Add new patient", "AddNewPatient", "Patient", null, new { @class = "btn btn-primary" })
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item">
+                @Html.ActionLink("Home", "Login", "Auth", null)
+            </li>
+            <li class="breadcrumb-item">
+                @Html.ActionLink("Admin", "Patients", "Admin", null)
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">New Patient</li>
+        </ul>
+    </div>
+
+</nav>
+<div class="btn-group" role="group" aria-label="Basic example">
+    @Html.ActionLink("Patients", "Patients", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Users", "Users", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Nurses", "Nurses", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Doctors", "Doctors", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Wards", "Wards", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Departments", "Departments", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Hospitals", "Hospitals", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Medicines", "Medicines", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Prescriptions", "Prescriptions", "Admin", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Sensors", "Sensors", "Admin", null, new { @class = "btn btn-info" })
+</div>
+
+
+<div class="container">
+    <div class="col-lg-9 ">
+        <div class="jumbotron w-100">
+            @using (Html.BeginForm("AddNewPatient", "Patient", FormMethod.Post))
+            {
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        @Html.TextBox("patientName", "Name", new { @class = "form-control", type = "text" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.TextBox("patientSurname", "Surname", new { @class = "form-control", type = "text" })
+                    </div>
+                </div>
+                <div class="form-row" id="snswardrow">
+                    <div class="form-group col-md-6">
+                        @Html.DropDownList("SelectSensor", new SelectList(ViewBag.Sensors, "Value", "Text"),
+                                                 "Select Sensor", new { @class = "form-control" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.DropDownList("SelectWard", new SelectList(ViewBag.Wards, "Value", "Text"),
+                                 "Select Ward", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        @Html.DropDownList("SelectDepartment", new SelectList(ViewBag.Departments, "Value", "Text"),
+                                 "Select Department", new { @class = "form-control" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.DropDownList("SelectRole", new List<SelectListItem>
+                        {
+                            new SelectListItem{ Text="Patient", Value = "1" },
+                            new SelectListItem{ Text="Nurse", Value = "2" },
+                            new SelectListItem{ Text="Admin", Value = "3" },
+                            new SelectListItem{ Text="Doctor", Value = "4" }
+                        }),
+                        "Select Role" @*, new { @class = "form-control"}*@)
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        @Html.TextBox("patientLogin", "Login", new { @class = "form-control", type = "email" })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.TextBox("patientPassword", "Password", new { @class = "form-control", type = "password" })
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+            }
+        </div>
+    </div>
+</div>
+

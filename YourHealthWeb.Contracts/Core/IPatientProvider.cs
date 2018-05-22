@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using YourHealthWeb.Models;
 
 namespace YourHealthWeb.Contracts.Core
@@ -16,5 +14,7 @@ namespace YourHealthWeb.Contracts.Core
         IEnumerable<Patient> GetByDepartment(int departmentId);
 
         IEnumerable<Patient> GetByWard(int wardId);
+
+        void Delete(int id);
     }
 }

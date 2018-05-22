@@ -11,6 +11,7 @@ using YourHealthWeb.Contracts;
 using YourHealthWeb.Contracts.Core;
 using YourHealthWeb.Core;
 using YourHealthWeb.DAL;
+using YourHealthWeb.Models;
 
 namespace YourHealthWeb.Mvc
 {
@@ -32,6 +33,28 @@ namespace YourHealthWeb.Mvc
             // Add application services.
             services.AddTransient<IPatientProvider, PatientProvider>();
             services.AddTransient<IPatientRepository, PatientRepository>();
+            services.AddTransient<ITemperatureProvider, TemperatureProvider>();
+            services.AddTransient<IRepository<Temperature>, TemperatureRepository>();
+            services.AddTransient<IDepartmentProvider, DepartmentProvider>();
+            services.AddTransient<IRepository<Department>, DepartmentRepository>();
+            services.AddTransient<IWardProvider, WardProvider>();
+            services.AddTransient<IRepository<Ward>, WardRepository>();
+            services.AddTransient<IUserProvider, UserProvider>();
+            services.AddTransient<IRepository<HospitalUser>, UserRepository>();
+            services.AddTransient<IDoctorProvider, DoctorProvider>();
+            services.AddTransient<IRepository<Doctor>, DoctorRepository>();
+            services.AddTransient<INurseProvider, NurseProvider>();
+            services.AddTransient<IRepository<Nurse>, NurseRepository>();
+            services.AddTransient<IHospitalProvider, HospitalProvider>();
+            services.AddTransient<IRepository<Hospital>, HospitalRepository>();
+            services.AddTransient<ISensorProvider, SensorProvider>();
+            services.AddTransient<IRepository<Sensor>, SensorRepository>();
+            services.AddTransient<IMedicineProvider, MedicineProvider>();
+            services.AddTransient<IRepository<Medicine>, MedicineRepository>();
+            services.AddTransient<IPrescriptionProvider, PrescriptionProvider>();
+            services.AddTransient<IRepository<Prescription>, PrescriptionRepository>();
+
+
 
             services.AddMvc();
         }
@@ -55,7 +78,7 @@ namespace YourHealthWeb.Mvc
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=PatientList}/{id?}");
             });
         }
     }

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Admin | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <div class="nav-controls">
+        <a href="newentity.html"><button type="button" class="btn btn-primary">New entity</button></a>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+        </ul>
+    </div>
+</nav>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a href="admin-patients.html"><button type="button" class="btn btn-info">Patients</button></a>
+    <a href="admin-users.html"><button type="button" class="btn btn-info">Users</button></a>
+    <a href="admin-nurses.html"><button type="button" class="btn btn-info active">Nurses</button></a>
+    <a href="admin-doctors.html"><button type="button" class="btn btn-info">Doctors</button></a>
+    <a href="admin-wards.html"><button type="button" class="btn btn-info">Wards</button></a>
+    <a href="admin-departments.html"><button type="button" class="btn btn-info">Departments</button></a>
+    <a href="admin-hospitals.html"><button type="button" class="btn btn-info">Hospitals</button></a>
+    <a href="admin-medicines.html"><button type="button" class="btn btn-info">Medicines</button></a>
+    <a href="admin-prescriptions.html"><button type="button" class="btn btn-info">Prescriptions</button></a>
+    <a href="admin-sensors.html"><button type="button" class="btn btn-info">Sensors</button></a>
+</div>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <div class="jumbotron w-100">
+            <div class="block-list">
+                <a href="nursepage.html" id="adm-nrs1">Nurse 1</a>
+                <button type="button" class="btn btn-primary" id="adm-nrs1del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="nursepage.html" id="adm-nrs2">Nurse 2</a>
+                <button type="button" class="btn btn-primary" id="adm-nrs2del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="nursepage.html" id="adm-nrs3">Nurse 3</a>
+                <button type="button" class="btn btn-primary" id="adm-nrs3del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="nursepage.html" id="adm-nrs4">Nurse 4</a>
+                <button type="button" class="btn btn-primary" id="adm-nrs4del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="nursepage.html" id="adm-nrs5">Nurse 5</a>
+                <button type="button" class="btn btn-primary" id="adm-nrs5del">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Admin | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <div class="nav-controls">
+        <a href="newentity.html"><button type="button" class="btn btn-primary">New entity</button></a>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+        </ul>
+    </div>
+</nav>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a href="admin-patients.html"><button type="button" class="btn btn-info">Patients</button></a>
+    <a href="admin-users.html"><button type="button" class="btn btn-info">Users</button></a>
+    <a href="admin-nurses.html"><button type="button" class="btn btn-info">Nurses</button></a>
+    <a href="admin-doctors.html"><button type="button" class="btn btn-info active">Doctors</button></a>
+    <a href="admin-wards.html"><button type="button" class="btn btn-info">Wards</button></a>
+    <a href="admin-departments.html"><button type="button" class="btn btn-info">Departments</button></a>
+    <a href="admin-hospitals.html"><button type="button" class="btn btn-info">Hospitals</button></a>
+    <a href="admin-medicines.html"><button type="button" class="btn btn-info">Medicines</button></a>
+    <a href="admin-prescriptions.html"><button type="button" class="btn btn-info">Prescriptions</button></a>
+    <a href="admin-sensors.html"><button type="button" class="btn btn-info">Sensors</button></a>
+</div>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <div class="jumbotron w-100">
+            <div class="block-list">
+                <a href="doctorpage.html" id="adm-dct1">Doctor 1</a>
+                <button type="button" class="btn btn-primary" id="adm-dct1del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="doctorpage.html" id="adm-dct2">Doctor 2</a>
+                <button type="button" class="btn btn-primary" id="adm-dct2del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="doctorpage.html" id="adm-dct3">Doctor 3</a>
+                <button type="button" class="btn btn-primary" id="adm-dct3del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="doctorpage.html" id="adm-dct4">Doctor 4</a>
+                <button type="button" class="btn btn-primary" id="adm-dct4del">Delete</button>
+            </div>
+            <div class="block-list">
+                <a href="doctorpage.html" id="adm-dct5">Doctor 5</a>
+                <button type="button" class="btn btn-primary" id="adm-dct5del">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+

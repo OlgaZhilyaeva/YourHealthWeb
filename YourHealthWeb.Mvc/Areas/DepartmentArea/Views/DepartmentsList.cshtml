@@ -1,0 +1,29 @@
+﻿@model IEnumerable<YourHealthWeb.Models.Department>
+@{
+    ViewData["Title"] = "Departments | WebClinic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebClinic</a>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Departments</li>
+    </ul>
+</nav>
+<div class="container">
+
+    <div class="col-lg-9 ">
+        <h1>Departments</h1>
+        <div class="jumbotron w-100">
+            @foreach (var department in Model)
+            {
+                <div class="block-list">
+                    @Html.ActionLink(department.Name, "WardList", "Ward", new { id = department.DepartmentId}, null)
+                    <button type="button" class="btn btn-primary" id="dep1report">Report</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

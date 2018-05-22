@@ -1,4 +1,6 @@
-﻿namespace YourHealthWeb.Models
+﻿using System.Collections.Generic;
+
+namespace YourHealthWeb.Models
 {
     public class Patient
     {
@@ -7,6 +9,7 @@
         public string Surname { get; set; }
         public string Documents { get; set; }
 
+        public Sensor Sensor { get; set; }
         public HospitalUser User { get; set; }
         public Ward Ward { get; set; }
     }
